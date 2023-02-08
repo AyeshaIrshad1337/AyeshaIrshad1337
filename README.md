@@ -8,10 +8,11 @@
   </a>
   <a href="https://twitter.com/Ayeshairshad124">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
-  </a>
-<img src="https://komarev.com/ghpvc/?username=AyeshaIrshad1337&style=flat-square&color=blue" alt=""/>
+  </a>  
+
 </div>
 <div align="center">
+<img src="https://komarev.com/ghpvc/?username=AyeshaIrshad1337&style=flat-square&color=blue" alt=""/>
   <h1> Hi there 👋</h1>
 </div>
 
