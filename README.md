@@ -1,7 +1,6 @@
-<p align="center">
-  <img src="https://github.com/matyo91/matyo91/raw/main/assets/github.gif" alt="Hi, I'm Ayesha 👋 I'm a 🚀 Machine Learning Engineer 🚀 I ❤️ Happy Hardcore ❤️">
-</p>
-<div id="badges" align="left">
+![](https://user-images.githubusercontent.com/3369400/133268513-5bfe2f93-4402-42c9-a403-81c9e86934b6.jpeg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&pause=1000&color=288BFF&center=true&vCenter=true&width=1435&height=100&lines=Hi+%2C+I+Am+Ayesha+Irshad;The+Next+Code+Breaker)](https://git.io/typing-svg)
+<div id="badges" align="center">
   <a href="https://www.linkedin.com/in/ayesha-irshad/">
   <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
@@ -9,7 +8,7 @@
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
 </div>
-<div align="left">  
+<div align="center">  
 <img src="https://komarev.com/ghpvc/?username=AyeshaIrshad1337&style=flat-square&color=blue" alt=""/>
 </div>
 
