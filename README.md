@@ -1,19 +1,16 @@
-
-<div id="header" align="center">
-  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
-</div>
-<div id="badges" align="center">
+<p align="center">
+  <img src="https://github.com/matyo91/matyo91/raw/main/assets/github.gif" alt="Hi, I'm Ayesha 👋 I'm a 🚀 Machine Learning Engineer 🚀 I ❤️ Happy Hardcore ❤️">
+</p>
+<div id="badges" align="left">
   <a href="https://www.linkedin.com/in/ayesha-irshad/">
   <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
   <a href="https://twitter.com/Ayeshairshad124">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
-  </a>  
-
+  </a>
 </div>
-<div align="center">
+<div align="left">  
 <img src="https://komarev.com/ghpvc/?username=AyeshaIrshad1337&style=flat-square&color=blue" alt=""/>
-  <h1> Hi there 👋</h1>
 </div>
 
 ---
