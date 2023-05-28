@@ -38,10 +38,7 @@ I am a Computer Scientist / Machine Learning Engineer <img src="https://media.gi
 ---
 
 ### :fire: My Stats :
-![Ayesha GitHub stats](https://github-readme-stats.vercel.app/api?username=AyeshaIrshad1337&show_icons=true&theme=radical)  
+<!-- ![Ayesha GitHub stats](https://github-readme-stats.vercel.app/api?username=AyeshaIrshad1337&show_icons=true&theme=radical)   -->
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=AyeshaIrshad1337&theme=dark&background=000000)](https://git.io/streak-stats)    
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AyeshaIrshad1337&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=AyeshaIrshad1337&langs_count=5&theme=tokyonight)]()  
-   
-![Your Contributions](https://img.shields.io/endpoint?url=https://profile-summary-gitlab-tau.vercel.app/api/gitlab?user=AyeshaIrshad1337&label=contributions)
-   
