@@ -22,7 +22,7 @@ I am a Computer Scientist / Machine Learning Engineer <img src="https://media.gi
 - 👯 I’m looking to collaborate on projects related with AI
 - 🤔 I’m looking for help with my Work to Grow
 - 💬 Ask me about anything regarding my Work
-- 📫 How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-kakbar-blue?style=flat&logo=Linkedin&logoColor=white)]([your-linkedin-url](https://www.linkedin.com/in/ayesha-irshad/))
+- 📫 How to reach me: ([Linkedin](https://www.linkedin.com/in/ayesha-irshad/))
 
 - ⚡ Fun fact: I Dont't Give UP Easily
 
