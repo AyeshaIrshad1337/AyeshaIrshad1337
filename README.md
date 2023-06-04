@@ -38,5 +38,4 @@ I am a Computer Scientist / Machine Learning Engineer <img src="https://media.gi
 ---
 
 ### :fire: My Stats :
-![AyeshaIrshad1337 github-stats](https://stats.hyochan.dev/api/github-stats-advanced?login=AyeshaIrshad1337)
-![AyeshaIrshad1337 github-trophies](https://stats.hyochan.dev/api/github-trophies?login=AyeshaIrshad1337)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=AyeshaIrshad1337&show_icons=true&theme=radical)
