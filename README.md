@@ -38,6 +38,7 @@ I am a Computer Scientist / Machine Learning Engineer <img src="https://media.gi
 ---
 
 ### :fire: My Stats :
+[!Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=AyeshaIrshad1337&show_icons=true&theme=radical)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=AyeshaIrshad1337&theme=nord_dark)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AyeshaIrshad1337&theme=nord_dark&utcOffset=8)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AyeshaIrshad1337&theme=nord_dark)
