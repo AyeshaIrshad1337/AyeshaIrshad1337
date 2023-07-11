@@ -1,4 +1,4 @@
-![](https://user-images.githubusercontent.com/3369400/133268513-5bfe2f93-4402-42c9-a403-81c9e86934b6.jpeg)
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&pause=1000&color=288BFF&center=true&vCenter=true&width=1435&height=100&lines=Hi+%2C+I+Am+Ayesha+Irshad;The+Next+Code+Breaker)](https://git.io/typing-svg)
 <div id="badges" align="center">
   <a href="https://www.linkedin.com/in/ayesha-irshad/">
@@ -16,6 +16,7 @@
 
 ### :woman_technologist: About Me :
 I am a Computer Scientist / Machine Learning Engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Pakistan.
+<img align="right" alt="Coding" width="400" src="https://media4.giphy.com/media/QBvHYx6taXPwCHqTRR/giphy.gif?cid=ecf05e477rwbfukqxj1vya3n0n69gz1uro4fktmzwevhteb4&ep=v1_gifs_search&rid=giphy.gif&ct=g">
 
 - 🔭 I’m currently working on Supervised Machince Learning
 - 🌱 I’m currently learning Machine Learning
