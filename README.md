@@ -1,3 +1,5 @@
+<div align="center">
+  <img src="https://media1.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif?cid=ecf05e47npujzng7pjmpuu0lxxc3sokj6c4uy5o1yhffnw4z&ep=v1_gifs_related&rid=giphy.gif&ct=g" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></div>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&pause=1000&color=288BFF&center=true&vCenter=true&width=1435&height=100&lines=Hi+%2C+I+Am+Ayesha+Irshad;The+Next+Code+Breaker)](https://git.io/typing-svg)
 <div id="badges" align="center">
