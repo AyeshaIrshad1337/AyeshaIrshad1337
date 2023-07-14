@@ -1,7 +1,6 @@
 <div align="center">
-  <img src="https://media1.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif?cid=ecf05e47npujzng7pjmpuu0lxxc3sokj6c4uy5o1yhffnw4z&ep=v1_gifs_related&rid=giphy.gif&ct=g" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></div>
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&pause=1000&color=288BFF&center=true&vCenter=true&width=1435&height=100&lines=Hi+%2C+I+Am+Ayesha+Irshad;The+Next+Code+Breaker)](https://git.io/typing-svg)
+<img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AyeshaIrshad1337&theme=nord_dark"> 
+</div>
 <div id="badges" align="center">
   <a href="https://www.linkedin.com/in/ayesha-irshad/">
   <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
@@ -41,13 +40,13 @@ I am a Computer Scientist / Machine Learning Engineer <img src="https://media.gi
 ---
 
 ### :fire: My Stats :
-![Ayesha Irshad GitHub stats](https://github-readme-stats.vercel.app/api?username=AyeshaIrshad1337&show_icons=true&theme=radical)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=AyeshaIrshad1337&theme=nord_dark)
-![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AyeshaIrshad1337&theme=nord_dark&utcOffset=8)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AyeshaIrshad1337&theme=nord_dark)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AyeshaIrshad1337&theme=nord_dark)
-![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AyeshaIrshad1337&theme=nord_dark) 
 ## ⚡Recent GitHub Activity
   [![Ayesha github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=AyeshaIrshad1337&bg_color=18122B&color=6096B4&line=3A98B9&point=FCFFE7&area=true&hide_border=false)](https://github.com/ashutosh00710/github-readme-activity-graph)
   
  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
+
+## 🥇Courses Repo
+### Machine Learning Specialization
