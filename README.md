@@ -42,11 +42,7 @@ I am a Computer Scientist / Machine Learning Engineer <img src="https://media.gi
 ### :fire: My Stats :
 ![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=AyeshaIrshad1337&theme=nord_dark)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AyeshaIrshad1337&theme=nord_dark)
-![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AyeshaIrshad1337&theme=nord_dark)
-### 🤞 Languages :  
-  
-<img src="https://wakatime.com/share/@d64e93e0-171a-4ae0-bae0-ef9b433798c8/ac442015-4939-4e48-adf4-9c960b015f32.svg" height="300">
-  
+![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AyeshaIrshad1337&theme=nord_dark) 
 ## ⚡Recent GitHub Activity
 [![Ayesha github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=AyeshaIrshad1337&bg_color=18122B&color=6096B4&line=3A98B9&point=FCFFE7&area=true&hide_border=false)](https://github.com/ashutosh00710/github-readme-activity-graph)
   
