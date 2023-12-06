@@ -44,7 +44,7 @@ I am a Computer Scientist / Machine Learning Engineer <img src="https://media.gi
 ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AyeshaIrshad1337&theme=nord_dark)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AyeshaIrshad1337&theme=nord_dark) 
 ![](https://github-readme-streak-stats.herokuapp.com/?user=AyeshaIrshad1337&theme=dark)
-  
+![](https://github-readme-stats.vercel.app/api?username=AyeshaIrshad1337&show_icons=true&theme=dark)
 <p align="center"><a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=AyeshaIrshad1337&theme=darkhub&row=1" alt="ashad001" /></a></p>
 
 ## ⚡Recent GitHub Activity
