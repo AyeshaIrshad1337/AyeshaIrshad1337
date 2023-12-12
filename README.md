@@ -15,7 +15,7 @@
 
 ---
 
-### :woman_technologist: About Me :
+### About Me :
 I am a Computer Scientist / Machine Learning Engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Pakistan.
 <img align="right" alt="Coding" width="400" src="https://media4.giphy.com/media/QBvHYx6taXPwCHqTRR/giphy.gif?cid=ecf05e477rwbfukqxj1vya3n0n69gz1uro4fktmzwevhteb4&ep=v1_gifs_search&rid=giphy.gif&ct=g">
 
