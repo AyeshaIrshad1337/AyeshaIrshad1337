@@ -1,17 +1,5 @@
-<div align="center">
-<img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AyeshaIrshad1337&theme=nord_dark"> 
-</div>
-<div id="badges" align="center">
-  <a href="https://www.linkedin.com/in/ayesha-irshad/">
-  <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  </a>
-  <a href="https://twitter.com/Ayeshairshad124">
-    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
-  </a>
-</div>
-<div align="center">  
-<img src="https://komarev.com/ghpvc/?username=AyeshaIrshad1337&style=flat-square&color=blue" alt=""/>
-</div>
+## Ayesha Irshad 👋 
+
 
 ---
 
