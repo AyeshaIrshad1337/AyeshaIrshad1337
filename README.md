@@ -1,9 +1,8 @@
-## Hi!! , Its Me:  Ayesha Irshad 👋 
-<div align='left'>
-<a href="https://app.daily.dev/ayeshaitshad1337"><img src="https://github.com/AyeshaIrshad1337/AyeshaIrshad1337/blob/main/devcard.svg" width="400" alt="Ayesha Irshad's Dev Card"/></a>
+<div align="left">
+<a href="https://app.daily.dev/ayeshaitshad1337" target="_blank"><img width="256" align="right" src="https://github.com/AyeshaIrshad1337/AyeshaIrshad1337/blob/main/devcard.svg" width="400" alt="Ayesha Irshad's Dev Card"/></a>
 </div>
 
-  
+## Hi!! , Its Me:  Ayesha Irshad 👋   
 ### About Me :
 I am a Computer Scientist / Machine Learning Engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Pakistan.
 <img align="right" alt="Coding" width="400" src="https://media4.giphy.com/media/QBvHYx6taXPwCHqTRR/giphy.gif?cid=ecf05e477rwbfukqxj1vya3n0n69gz1uro4fktmzwevhteb4&ep=v1_gifs_search&rid=giphy.gif&ct=g">
