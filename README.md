@@ -12,7 +12,7 @@ I am a Computer Scientist / Machine Learning Engineer <img src="https://media.gi
 - 💬 Ask me about anything regarding my Work
 - 📫 How to reach me: ([Linkedin](https://www.linkedin.com/in/ayesha-irshad/))
 
-- ⚡ Fun fact: I Dont't Give UP Easily
+- ⚡ Fun fact: I Don't Give UP Easily
 
 ---
 
