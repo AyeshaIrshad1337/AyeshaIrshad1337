@@ -3,6 +3,14 @@
 </div>
 
 ## Hi!! , Its Me:  Ayesha Irshad 👋   
+   
+ <a href="https://drive.google.com/file/d/14joA1FErQqEvGAVqT0XZ8VO9INDuE6AK/view">
+    <img
+      src="https://img.shields.io/badge/Resume--brightgreen?style=flat-square&logo=standardresume&labelColor=healthiness"
+      alt="Resume"
+    />
+  </a>
+  
 ### About Me :
 I am a Computer Scientist / Machine Learning Engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Pakistan.
 - 🔭 I’m currently working on Supervised Machince Learning
