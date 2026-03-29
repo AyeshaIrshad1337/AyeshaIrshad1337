@@ -2,22 +2,20 @@
   <img src="./header.svg" width="100%" alt="Ayesha Irshad — Terminal Header"/>
 </div>
 
+<div align="center">
+  <img src="./socials.svg" width="100%" alt="Socials"/>
+</div>
+
 <p align="center">
-  <a href="https://www.linkedin.com/in/ayesha-irshad/">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>&nbsp;
-  <a href="mailto:ayeshaitshad124@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
-  </a>&nbsp;
-  <a href="https://github.com/AyeshaIrshad1337">
-    <img src="https://img.shields.io/badge/GitHub-161B22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-  </a>&nbsp;
-  <img src="https://komarev.com/ghpvc/?username=AyeshaIrshad1337&style=for-the-badge&color=0a0e17&label=VISITORS&labelColor=1a2340" alt="Visitors"/>
+  <a href="https://www.linkedin.com/in/ayesha-irshad/"><code>🔗 linkedin</code></a> &nbsp;·&nbsp;
+  <a href="mailto:ayeshaitshad124@gmail.com"><code>📬 email</code></a> &nbsp;·&nbsp;
+  <a href="https://github.com/AyeshaIrshad1337"><code>⚡ github</code></a> &nbsp;·&nbsp;
+  <img src="https://komarev.com/ghpvc/?username=AyeshaIrshad1337&style=flat-square&color=0a0e17&label=visitors&labelColor=1a2340" alt="Visitors"/>
 </p>
 
 <br/>
 
-## `> ls -la projects/`
+## `> ./projects --all`
 
 <div align="center">
   <img src="./projects.svg" width="100%" alt="Projects"/>
