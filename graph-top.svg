@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="36" viewBox="0 0 850 36">
+  <rect fill="#0f1525" width="850" height="36" rx="10"/>
+  <circle fill="#ff5f56" cx="18" cy="18" r="5.5"/>
+  <circle fill="#ffbd2e" cx="36" cy="18" r="5.5"/>
+  <circle fill="#27c93f" cx="54" cy="18" r="5.5"/>
+  <text fill="#3d4f6f" font-family="monospace" font-size="11.5" x="425" y="22" text-anchor="middle">ayesha@codebreaker — git log --graph --all --oneline</text>
+  <!-- bottom edge (flat, no radius) so it connects to graph below -->
+  <rect fill="#0f1525" y="26" width="850" height="10"/>
+  <line x1="0" y1="35.5" x2="850" y2="35.5" stroke="#1a2340"/>
+</svg>
