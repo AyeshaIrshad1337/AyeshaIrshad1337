@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="230" viewBox="0 0 850 230">
+  <style>
+    @keyframes typing { from { width: 0 } to { width: 100% } }
+    @keyframes blink { 0%, 100% { opacity: 1 } 50% { opacity: 0 } }
+    @keyframes scanline { 0% { transform: translateY(-100%) } 100% { transform: translateY(100%) } }
+    @keyframes fadeIn1 { 0%, 20% { opacity: 0 } 30%, 100% { opacity: 1 } }
+    @keyframes fadeIn2 { 0%, 40% { opacity: 0 } 50%, 100% { opacity: 1 } }
+    @keyframes fadeIn3 { 0%, 55% { opacity: 0 } 65%, 100% { opacity: 1 } }
+    @keyframes fadeIn4 { 0%, 70% { opacity: 0 } 80%, 100% { opacity: 1 } }
+    @keyframes pulse { 0%, 100% { opacity: 0.6 } 50% { opacity: 1 } }
+    .terminal-bg { fill: #0a0e17; }
+    .title-bar { fill: #151b2b; }
+    .btn-red { fill: #ff5f56; }
+    .btn-yellow { fill: #ffbd2e; }
+    .btn-green { fill: #27c93f; }
+    .terminal-title { fill: #5a6a8a; font-family: 'Courier New', monospace; font-size: 12px; }
+    .prompt { fill: #7b61ff; font-family: 'Courier New', monospace; font-size: 14px; font-weight: bold; }
+    .command { fill: #00ff9f; font-family: 'Courier New', monospace; font-size: 14px; }
+    .output { fill: #8b95a8; font-family: 'Courier New', monospace; font-size: 13px; }
+    .highlight { fill: #ff6ac1; font-family: 'Courier New', monospace; font-size: 13px; }
+    .accent { fill: #7b61ff; font-family: 'Courier New', monospace; font-size: 13px; }
+    .name-text { fill: #00ff9f; font-family: 'Courier New', monospace; font-size: 22px; font-weight: bold; }
+    .role-text { fill: #5a6a8a; font-family: 'Courier New', monospace; font-size: 13px; }
+    .cursor { fill: #00ff9f; animation: blink 1s step-end infinite; }
+    .line1 { animation: fadeIn1 3s ease-out forwards; }
+    .line2 { animation: fadeIn2 3s ease-out forwards; }
+    .line3 { animation: fadeIn3 3s ease-out forwards; }
+    .line4 { animation: fadeIn4 3s ease-out forwards; }
+    .glow { filter: drop-shadow(0 0 3px rgba(0, 255, 159, 0.3)); }
+    .border-line { fill: none; stroke: #1e2940; stroke-width: 1; }
+  </style>
+  
+  <!-- Terminal Window -->
+  <rect class="terminal-bg" width="850" height="230" rx="12" ry="12"/>
+  <rect class="border-line" x="0.5" y="0.5" width="849" height="229" rx="12" ry="12" style="stroke:#1e2940;stroke-width:1;fill:none"/>
+  
+  <!-- Title Bar -->
+  <rect class="title-bar" width="850" height="36" rx="12" ry="12"/>
+  <rect class="title-bar" width="850" height="12" y="24"/>
+  <circle class="btn-red" cx="20" cy="18" r="6"/>
+  <circle class="btn-yellow" cx="40" cy="18" r="6"/>
+  <circle class="btn-green" cx="60" cy="18" r="6"/>
+  <text class="terminal-title" x="425" y="22" text-anchor="middle">ayesha@codebreaker: ~/projects</text>
+  
+  <!-- Separator Line -->
+  <line x1="0" y1="36" x2="850" y2="36" style="stroke:#1e2940;stroke-width:1"/>
+  
+  <!-- Terminal Content -->
+  <g transform="translate(24, 60)">
+    <!-- Line 1: whoami -->
+    <text class="prompt" y="0">❯</text>
+    <text class="command glow" x="20" y="0">whoami</text>
+    
+    <!-- Line 2: Name output -->
+    <g class="line1">
+      <text class="name-text glow" x="0" y="28">Ayesha Irshad</text>
+      <text class="role-text" x="210" y="28">// Solo Founder · AI Engineer · Full-Stack Builder</text>
+    </g>
+    
+    <!-- Line 3: cat motto -->
+    <g class="line2">
+      <text class="prompt" y="62">❯</text>
+      <text class="command glow" x="20" y="62">cat motto.txt</text>
+    </g>
+    
+    <!-- Line 4: motto output -->
+    <g class="line3">
+      <text class="highlight" x="0" y="88">"I may not be Alan Turing, but I am confident enough to be the next codebreaker."</text>
+    </g>
+    
+    <!-- Line 5: status -->
+    <g class="line4">
+      <text class="prompt" y="122">❯</text>
+      <text class="command glow" x="20" y="122">status --current</text>
+      <text class="output" x="0" y="148">shipping:</text>
+      <text class="accent" x="75" y="148">Codet.ai</text>
+      <text class="output" x="145" y="148">·</text>
+      <text class="accent" x="160" y="148">DiffSpy</text>
+      <text class="output" x="222" y="148">·</text>
+      <text class="accent" x="237" y="148">NEXUS</text>
+      <text class="output" x="295" y="148">  @</text>
+      <text class="highlight" x="320" y="148">Ahoy</text>
+      <rect class="cursor" x="360" y="136" width="8" height="16"/>
+    </g>
+  </g>
+</svg>
