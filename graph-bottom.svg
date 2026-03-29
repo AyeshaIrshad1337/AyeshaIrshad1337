@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="12" viewBox="0 0 850 12">
+  <rect fill="#0a0e17" width="850" height="12"/>
+  <line x1="0" y1="0.5" x2="850" y2="0.5" stroke="#1a2340"/>
+  <rect fill="#0a0e17" width="850" height="12" rx="0"/>
+  <!-- Rounded bottom corners -->
+  <rect fill="#0a0e17" y="0" width="850" height="12" rx="10"/>
+  <rect fill="transparent" y="0" width="850" height="2"/>
+  <rect x="0.5" y="0" width="849" height="11.5" rx="10" fill="none" stroke="#1a2340"/>
+</svg>
