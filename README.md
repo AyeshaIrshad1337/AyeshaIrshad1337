@@ -76,12 +76,12 @@ class AyeshaIrshad:
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AyeshaIrshad1337&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A960FF&icon_color=A960FF&text_color=FFFFFF" width="49%" alt="GitHub Stats"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AyeshaIrshad1337&theme=tokyonight&hide_border=true&background=0D1117&ring=A960FF&fire=A960FF&currStreakLabel=A960FF" width="49%" alt="GitHub Streak"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=AyeshaIrshad1337&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A960FF&icon_color=A960FF&text_color=FFFFFF" width="49%" alt="GitHub Stats"/>
+  <img src="https://streak-stats.demolab.com/?user=AyeshaIrshad1337&theme=tokyonight&hide_border=true&background=0D1117&ring=A960FF&fire=A960FF&currStreakLabel=A960FF" width="49%" alt="GitHub Streak"/>
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AyeshaIrshad1337&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A960FF&text_color=FFFFFF&langs_count=8" width="49%" alt="Top Languages"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=AyeshaIrshad1337&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A960FF&text_color=FFFFFF&langs_count=8" width="49%" alt="Top Languages"/>
 </div>
 
 ---
@@ -89,19 +89,15 @@ class AyeshaIrshad:
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=AyeshaIrshad1337&theme=discord&no-frame=true&no-bg=true&row=1&column=7" width="100%" alt="GitHub Trophies"/>
+  <img src="https://github-trophies.vercel.app/?username=AyeshaIrshad1337&theme=discord&no-frame=true&no-bg=true&row=1&column=7" width="100%" alt="GitHub Trophies"/>
 </div>
 
 ---
 
-## 🐍 Contribution Graph
+## 📈 Contribution Graph
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AyeshaIrshad1337/AyeshaIrshad1337/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AyeshaIrshad1337/AyeshaIrshad1337/output/github-snake.svg" />
-    <img alt="github-snake" src="https://raw.githubusercontent.com/AyeshaIrshad1337/AyeshaIrshad1337/output/github-snake-dark.svg" />
-  </picture>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=AyeshaIrshad1337&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=A960FF&line=A960FF&point=FFFFFF" width="98%" alt="Activity Graph"/>
 </div>
 
 ---
