@@ -1,202 +1,218 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="620" viewBox="0 0 850 620">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="750" viewBox="0 0 850 750">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0a0e17"/>
       <stop offset="100%" style="stop-color:#0d1321"/>
     </linearGradient>
-    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#111827"/>
       <stop offset="100%" style="stop-color:#0f1525"/>
     </linearGradient>
-    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7b61ff"/>
-      <stop offset="100%" style="stop-color:#00ff9f"/>
+    <linearGradient id="a1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7b61ff"/><stop offset="100%" style="stop-color:#00ff9f"/>
     </linearGradient>
-    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ff6ac1"/>
-      <stop offset="100%" style="stop-color:#7b61ff"/>
+    <linearGradient id="a2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6ac1"/><stop offset="100%" style="stop-color:#7b61ff"/>
     </linearGradient>
-    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00ff9f"/>
-      <stop offset="100%" style="stop-color:#00b4d8"/>
+    <linearGradient id="a3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff9f"/><stop offset="100%" style="stop-color:#00b4d8"/>
     </linearGradient>
-    <linearGradient id="accent4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ffbd2e"/>
-      <stop offset="100%" style="stop-color:#ff6ac1"/>
+    <linearGradient id="a4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffbd2e"/><stop offset="100%" style="stop-color:#ff6ac1"/>
     </linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="softglow"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="orb"><feGaussianBlur stdDeviation="12"/></filter>
   </defs>
 
   <!-- BG -->
-  <rect fill="url(#bg)" width="850" height="620" rx="10"/>
-  <rect x="0.5" y="0.5" width="849" height="619" rx="10" fill="none" stroke="#1a2340"/>
+  <rect fill="url(#bg)" width="850" height="750" rx="10"/>
+  <rect x="0.5" y="0.5" width="849" height="749" rx="10" fill="none" stroke="#1a2340"/>
 
-  <!-- ═══ CARD 1: Codet.ai ═══ -->
+  <!-- ════════════════════ CODET.AI ════════════════════ -->
   <g transform="translate(20, 15)">
-    <rect fill="url(#card1)" width="395" height="140" rx="8"/>
-    <rect x="0.5" y="0.5" width="394" height="139" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
-    <!-- Top accent -->
-    <rect fill="url(#accent1)" width="395" height="2.5" rx="8"/>
-    <rect fill="url(#card1)" y="3" width="395" height="8" rx="0"/>
-    <!-- Glow orb -->
-    <circle cx="30" cy="30" r="20" fill="#7b61ff" opacity="0.06" filter="url(#softglow)"/>
-    <!-- Status dot -->
-    <circle cx="18" cy="25" r="4" fill="#00ff9f"/>
-    <!-- Title -->
-    <text fill="#e2e8f0" font-family="monospace" font-weight="bold" font-size="15" x="30" y="29">Codet.ai</text>
-    <text fill="#3d4f6f" font-family="monospace" font-size="11" x="120" y="29">// GTM Optimization Platform</text>
+    <rect fill="url(#card)" width="395" height="170" rx="10"/>
+    <rect x="0.5" y="0.5" width="394" height="169" rx="10" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+    <!-- Gradient top bar -->
+    <rect fill="url(#a1)" width="395" height="3" rx="10"/>
+    <rect fill="url(#card)" y="4" width="395" height="8"/>
+    <!-- Corner orb -->
+    <circle cx="370" cy="30" r="35" fill="#7b61ff" opacity="0.04" filter="url(#orb)"/>
+
+    <!-- Status + Title -->
+    <circle cx="24" cy="30" r="5" fill="#00ff9f" opacity="0.9"/>
+    <text fill="#e8ecf1" font-family="monospace" font-weight="bold" font-size="16" x="38" y="35">Codet.ai</text>
+    <!-- Subtitle -->
+    <text fill="#3d4f6f" font-family="monospace" font-size="11" x="38" y="52">GTM Optimization Platform</text>
+    <!-- Divider -->
+    <line x1="24" y1="62" x2="375" y2="62" stroke="#1a2340" stroke-width="0.5"/>
     <!-- Description -->
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="52">Causal DAG experiments · Bayesian optimization</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="67">Thompson Sampling · Differential ICP profiling</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="82">Narrative arc hypothesis testing for founders</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="82">▸ Causal DAG experiment engine</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="99">▸ Bayesian optimization · Thompson Sampling</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="116">▸ Differential ICP profiling for founders</text>
     <!-- Tags -->
-    <rect fill="#1a1f35" x="18" y="98" width="52" height="20" rx="4"/><text fill="#7b61ff" font-family="monospace" font-size="9.5" x="26" y="112">Python</text>
-    <rect fill="#1a1f35" x="76" y="98" width="72" height="20" rx="4"/><text fill="#7b61ff" font-family="monospace" font-size="9.5" x="82" y="112">LangGraph</text>
-    <rect fill="#1a1f35" x="154" y="98" width="80" height="20" rx="4"/><text fill="#7b61ff" font-family="monospace" font-size="9.5" x="160" y="112">YugabyteDB</text>
-    <rect fill="#1a1f35" x="240" y="98" width="48" height="20" rx="4"/><text fill="#7b61ff" font-family="monospace" font-size="9.5" x="248" y="112">LLMs</text>
-    <rect fill="#1a1f35" x="294" y="98" width="56" height="20" rx="4"/><text fill="#7b61ff" font-family="monospace" font-size="9.5" x="300" y="112">FastAPI</text>
+    <rect fill="#161d2f" x="24" y="132" width="58" height="22" rx="5"/><text fill="#7b61ff" font-family="monospace" font-size="10" x="33" y="147">Python</text>
+    <rect fill="#161d2f" x="88" y="132" width="76" height="22" rx="5"/><text fill="#7b61ff" font-family="monospace" font-size="10" x="96" y="147">LangGraph</text>
+    <rect fill="#161d2f" x="170" y="132" width="84" height="22" rx="5"/><text fill="#7b61ff" font-family="monospace" font-size="10" x="178" y="147">YugabyteDB</text>
+    <rect fill="#161d2f" x="260" y="132" width="50" height="22" rx="5"/><text fill="#7b61ff" font-family="monospace" font-size="10" x="270" y="147">LLMs</text>
   </g>
 
-  <!-- ═══ CARD 2: DiffSpy ═══ -->
+  <!-- ════════════════════ DIFFSPY ════════════════════ -->
   <g transform="translate(435, 15)">
-    <rect fill="url(#card1)" width="395" height="140" rx="8"/>
-    <rect x="0.5" y="0.5" width="394" height="139" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
-    <rect fill="url(#accent2)" width="395" height="2.5" rx="8"/>
-    <rect fill="url(#card1)" y="3" width="395" height="8"/>
-    <circle cx="30" cy="30" r="20" fill="#ff6ac1" opacity="0.06" filter="url(#softglow)"/>
-    <circle cx="18" cy="25" r="4" fill="#00ff9f"/>
-    <text fill="#e2e8f0" font-family="monospace" font-weight="bold" font-size="15" x="30" y="29">DiffSpy</text>
-    <text fill="#3d4f6f" font-family="monospace" font-size="11" x="105" y="29">// Pricing Intelligence SaaS</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="52">LLM-based HTML→JSON pricing extraction</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="67">Tracks competitor changes over time</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="82">Works on any pricing page, zero selectors</text>
-    <rect fill="#1a1f35" x="18" y="98" width="56" height="20" rx="4"/><text fill="#ff6ac1" font-family="monospace" font-size="9.5" x="24" y="112">Next.js</text>
-    <rect fill="#1a1f35" x="80" y="98" width="56" height="20" rx="4"/><text fill="#ff6ac1" font-family="monospace" font-size="9.5" x="86" y="112">FastAPI</text>
-    <rect fill="#1a1f35" x="142" y="98" width="80" height="20" rx="4"/><text fill="#ff6ac1" font-family="monospace" font-size="9.5" x="148" y="112">Playwright</text>
-    <rect fill="#1a1f35" x="228" y="98" width="78" height="20" rx="4"/><text fill="#ff6ac1" font-family="monospace" font-size="9.5" x="234" y="112">Claude API</text>
+    <rect fill="url(#card)" width="395" height="170" rx="10"/>
+    <rect x="0.5" y="0.5" width="394" height="169" rx="10" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+    <rect fill="url(#a2)" width="395" height="3" rx="10"/>
+    <rect fill="url(#card)" y="4" width="395" height="8"/>
+    <circle cx="370" cy="30" r="35" fill="#ff6ac1" opacity="0.04" filter="url(#orb)"/>
+
+    <circle cx="24" cy="30" r="5" fill="#00ff9f" opacity="0.9"/>
+    <text fill="#e8ecf1" font-family="monospace" font-weight="bold" font-size="16" x="38" y="35">DiffSpy</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="11" x="38" y="52">Pricing Intelligence SaaS</text>
+    <line x1="24" y1="62" x2="375" y2="62" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="82">▸ LLM-based HTML → JSON extraction</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="99">▸ Tracks competitor pricing changes</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="116">▸ Any pricing page · Zero selectors</text>
+    <rect fill="#161d2f" x="24" y="132" width="64" height="22" rx="5"/><text fill="#ff6ac1" font-family="monospace" font-size="10" x="33" y="147">Next.js</text>
+    <rect fill="#161d2f" x="94" y="132" width="64" height="22" rx="5"/><text fill="#ff6ac1" font-family="monospace" font-size="10" x="103" y="147">FastAPI</text>
+    <rect fill="#161d2f" x="164" y="132" width="84" height="22" rx="5"/><text fill="#ff6ac1" font-family="monospace" font-size="10" x="173" y="147">Playwright</text>
+    <rect fill="#161d2f" x="254" y="132" width="82" height="22" rx="5"/><text fill="#ff6ac1" font-family="monospace" font-size="10" x="263" y="147">Claude API</text>
   </g>
 
-  <!-- ═══ CARD 3: NEXUS ═══ -->
-  <g transform="translate(20, 170)">
-    <rect fill="url(#card1)" width="395" height="140" rx="8"/>
-    <rect x="0.5" y="0.5" width="394" height="139" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
-    <rect fill="url(#accent3)" width="395" height="2.5" rx="8"/>
-    <rect fill="url(#card1)" y="3" width="395" height="8"/>
-    <circle cx="30" cy="30" r="20" fill="#00ff9f" opacity="0.06" filter="url(#softglow)"/>
-    <circle cx="18" cy="25" r="4" fill="#00ff9f"/>
-    <text fill="#e2e8f0" font-family="monospace" font-weight="bold" font-size="15" x="30" y="29">NEXUS</text>
-    <text fill="#3d4f6f" font-family="monospace" font-size="11" x="90" y="29">// Crypto Opportunity Scanner</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="52">11 chart patterns · Smart Money Concepts</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="67">VWAP · Support/Resistance detection</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="82">Live Binance WebSocket · Spot trading</text>
-    <rect fill="#1a1f35" x="18" y="98" width="52" height="20" rx="4"/><text fill="#00ff9f" font-family="monospace" font-size="9.5" x="26" y="112">Python</text>
-    <rect fill="#1a1f35" x="76" y="98" width="80" height="20" rx="4"/><text fill="#00ff9f" font-family="monospace" font-size="9.5" x="82" y="112">Binance API</text>
-    <rect fill="#1a1f35" x="162" y="98" width="80" height="20" rx="4"/><text fill="#00ff9f" font-family="monospace" font-size="9.5" x="168" y="112">WebSockets</text>
-    <rect fill="#1a1f35" x="248" y="98" width="100" height="20" rx="4"/><text fill="#00ff9f" font-family="monospace" font-size="9.5" x="254" y="112">Chart Patterns</text>
+  <!-- ════════════════════ NEXUS ════════════════════ -->
+  <g transform="translate(20, 200)">
+    <rect fill="url(#card)" width="395" height="170" rx="10"/>
+    <rect x="0.5" y="0.5" width="394" height="169" rx="10" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+    <rect fill="url(#a3)" width="395" height="3" rx="10"/>
+    <rect fill="url(#card)" y="4" width="395" height="8"/>
+    <circle cx="370" cy="30" r="35" fill="#00ff9f" opacity="0.04" filter="url(#orb)"/>
+
+    <circle cx="24" cy="30" r="5" fill="#00ff9f" opacity="0.9"/>
+    <text fill="#e8ecf1" font-family="monospace" font-weight="bold" font-size="16" x="38" y="35">NEXUS</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="11" x="38" y="52">Crypto Opportunity Scanner</text>
+    <line x1="24" y1="62" x2="375" y2="62" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="82">▸ 11 chart patterns · Smart Money Concepts</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="99">▸ VWAP · Support/Resistance detection</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="116">▸ Live Binance WebSocket · Spot trading</text>
+    <rect fill="#161d2f" x="24" y="132" width="58" height="22" rx="5"/><text fill="#00ff9f" font-family="monospace" font-size="10" x="33" y="147">Python</text>
+    <rect fill="#161d2f" x="88" y="132" width="86" height="22" rx="5"/><text fill="#00ff9f" font-family="monospace" font-size="10" x="97" y="147">Binance API</text>
+    <rect fill="#161d2f" x="180" y="132" width="86" height="22" rx="5"/><text fill="#00ff9f" font-family="monospace" font-size="10" x="189" y="147">WebSockets</text>
   </g>
 
-  <!-- ═══ CARD 4: ETA ═══ -->
-  <g transform="translate(435, 170)">
-    <rect fill="url(#card1)" width="395" height="140" rx="8"/>
-    <rect x="0.5" y="0.5" width="394" height="139" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
-    <rect fill="url(#accent4)" width="395" height="2.5" rx="8"/>
-    <rect fill="url(#card1)" y="3" width="395" height="8"/>
-    <circle cx="30" cy="30" r="20" fill="#ffbd2e" opacity="0.06" filter="url(#softglow)"/>
-    <circle cx="18" cy="25" r="4" fill="#ffbd2e"/>
-    <text fill="#e2e8f0" font-family="monospace" font-weight="bold" font-size="15" x="30" y="29">Expert Trade Analyzer</text>
-    <text fill="#3d4f6f" font-family="monospace" font-size="11" x="250" y="29">// ETA</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="52">AI-driven trade analysis engine</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="67">Intelligent pattern recognition</text>
-    <text fill="#6b7a99" font-family="monospace" font-size="10.5" x="18" y="82">Market insight &amp; signal generation</text>
-    <rect fill="#1a1f35" x="18" y="98" width="52" height="20" rx="4"/><text fill="#ffbd2e" font-family="monospace" font-size="9.5" x="30" y="112">Python</text>
-    <rect fill="#1a1f35" x="76" y="98" width="28" height="20" rx="4"/><text fill="#ffbd2e" font-family="monospace" font-size="9.5" x="82" y="112">ML</text>
-    <rect fill="#1a1f35" x="110" y="98" width="96" height="20" rx="4"/><text fill="#ffbd2e" font-family="monospace" font-size="9.5" x="116" y="112">Financial Data</text>
+  <!-- ════════════════════ ETA ════════════════════ -->
+  <g transform="translate(435, 200)">
+    <rect fill="url(#card)" width="395" height="170" rx="10"/>
+    <rect x="0.5" y="0.5" width="394" height="169" rx="10" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+    <rect fill="url(#a4)" width="395" height="3" rx="10"/>
+    <rect fill="url(#card)" y="4" width="395" height="8"/>
+    <circle cx="370" cy="30" r="35" fill="#ffbd2e" opacity="0.04" filter="url(#orb)"/>
+
+    <circle cx="24" cy="30" r="5" fill="#ffbd2e" opacity="0.9"/>
+    <text fill="#e8ecf1" font-family="monospace" font-weight="bold" font-size="16" x="38" y="35">Expert Trade Analyzer</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="11" x="38" y="52">AI Trading Analysis Engine</text>
+    <line x1="24" y1="62" x2="375" y2="62" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="82">▸ AI-driven trade analysis engine</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="99">▸ Intelligent pattern recognition</text>
+    <text fill="#7a8baa" font-family="monospace" font-size="11" x="24" y="116">▸ Market insight &amp; signal generation</text>
+    <rect fill="#161d2f" x="24" y="132" width="58" height="22" rx="5"/><text fill="#ffbd2e" font-family="monospace" font-size="10" x="36" y="147">Python</text>
+    <rect fill="#161d2f" x="88" y="132" width="36" height="22" rx="5"/><text fill="#ffbd2e" font-family="monospace" font-size="10" x="97" y="147">ML</text>
+    <rect fill="#161d2f" x="130" y="132" width="102" height="22" rx="5"/><text fill="#ffbd2e" font-family="monospace" font-size="10" x="139" y="147">Financial Data</text>
   </g>
 
-  <!-- ═══ CARD 5: Woven ═══ -->
-  <g transform="translate(20, 325)">
-    <rect fill="url(#card1)" width="260" height="130" rx="8"/>
-    <rect x="0.5" y="0.5" width="259" height="129" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+  <!-- ════════════ SECTION DIVIDER ════════════ -->
+  <line x1="40" y1="395" x2="810" y2="395" stroke="#1a2340" stroke-width="0.5" stroke-dasharray="4,6"/>
+  <text fill="#3d4f6f" font-family="monospace" font-size="10" x="425" y="412" text-anchor="middle">// more builds</text>
+
+  <!-- ════════════════════ ROW 3: Compact cards ════════════════════ -->
+
+  <!-- Woven -->
+  <g transform="translate(20, 430)">
+    <rect fill="url(#card)" width="260" height="135" rx="8"/>
+    <rect x="0.5" y="0.5" width="259" height="134" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
     <rect fill="#1e2a45" width="260" height="2" rx="8"/>
-    <circle cx="18" cy="25" r="4" fill="#5a6a8a"/>
-    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="30" y="28">Woven</text>
-    <text fill="#ffbd2e" font-family="monospace" font-size="10" x="82" y="28">★ 5</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="48">Collaborative book recommendation</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="62">using preference-similarity matching</text>
-    <rect fill="#1a1f35" x="18" y="80" width="52" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="26" y="93">Python</text>
-    <rect fill="#1a1f35" x="76" y="80" width="42" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="82" y="93">Flask</text>
-    <rect fill="#1a1f35" x="124" y="80" width="50" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="130" y="93">ColFil</text>
+    <circle cx="20" cy="28" r="4" fill="#5a6a8a"/>
+    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="32" y="33">Woven</text>
+    <text fill="#ffbd2e" font-family="monospace" font-size="11" x="86" y="33">★ 5</text>
+    <line x1="16" y1="44" x2="244" y2="44" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="62">Collaborative book recommendation</text>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="78">Preference-similarity matching</text>
+    <rect fill="#161d2f" x="16" y="96" width="56" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="24" y="111">Python</text>
+    <rect fill="#161d2f" x="78" y="96" width="48" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="86" y="111">Flask</text>
   </g>
 
-  <!-- ═══ CARD 6: SmartPick ═══ -->
-  <g transform="translate(295, 325)">
-    <rect fill="url(#card1)" width="260" height="130" rx="8"/>
-    <rect x="0.5" y="0.5" width="259" height="129" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+  <!-- SmartPick -->
+  <g transform="translate(295, 430)">
+    <rect fill="url(#card)" width="260" height="135" rx="8"/>
+    <rect x="0.5" y="0.5" width="259" height="134" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
     <rect fill="#1e2a45" width="260" height="2" rx="8"/>
-    <circle cx="18" cy="25" r="4" fill="#5a6a8a"/>
-    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="30" y="28">SmartPick</text>
-    <text fill="#ffbd2e" font-family="monospace" font-size="10" x="105" y="28">★ 2</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="48">Genetic algorithm book recommender</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="62">Fitness-evolved personalized picks</text>
-    <rect fill="#1a1f35" x="18" y="80" width="52" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="26" y="93">Python</text>
-    <rect fill="#1a1f35" x="76" y="80" width="72" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="82" y="93">Genetic Alg</text>
+    <circle cx="20" cy="28" r="4" fill="#5a6a8a"/>
+    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="32" y="33">SmartPick</text>
+    <text fill="#ffbd2e" font-family="monospace" font-size="11" x="110" y="33">★ 2</text>
+    <line x1="16" y1="44" x2="244" y2="44" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="62">Genetic algorithm recommender</text>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="78">Fitness-evolved personalized picks</text>
+    <rect fill="#161d2f" x="16" y="96" width="56" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="24" y="111">Python</text>
+    <rect fill="#161d2f" x="78" y="96" width="88" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="86" y="111">Genetic Alg</text>
   </g>
 
-  <!-- ═══ CARD 7: GAN Recommender ═══ -->
-  <g transform="translate(570, 325)">
-    <rect fill="url(#card1)" width="260" height="130" rx="8"/>
-    <rect x="0.5" y="0.5" width="259" height="129" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+  <!-- GAN Recommender -->
+  <g transform="translate(570, 430)">
+    <rect fill="url(#card)" width="260" height="135" rx="8"/>
+    <rect x="0.5" y="0.5" width="259" height="134" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
     <rect fill="#1e2a45" width="260" height="2" rx="8"/>
-    <circle cx="18" cy="25" r="4" fill="#5a6a8a"/>
-    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="30" y="28">GAN Recommender</text>
-    <text fill="#ffbd2e" font-family="monospace" font-size="10" x="175" y="28">★ 3</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="48">Rec systems via Generative</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="62">Adversarial Networks</text>
-    <rect fill="#1a1f35" x="18" y="80" width="52" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="26" y="93">Python</text>
-    <rect fill="#1a1f35" x="76" y="80" width="60" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="82" y="93">PyTorch</text>
-    <rect fill="#1a1f35" x="142" y="80" width="40" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="148" y="93">GANs</text>
+    <circle cx="20" cy="28" r="4" fill="#5a6a8a"/>
+    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="32" y="33">GAN Recommender</text>
+    <text fill="#ffbd2e" font-family="monospace" font-size="11" x="180" y="33">★ 3</text>
+    <line x1="16" y1="44" x2="244" y2="44" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="62">Rec systems via Generative</text>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="78">Adversarial Networks</text>
+    <rect fill="#161d2f" x="16" y="96" width="56" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="24" y="111">Python</text>
+    <rect fill="#161d2f" x="78" y="96" width="62" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="86" y="111">PyTorch</text>
+    <rect fill="#161d2f" x="146" y="96" width="44" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="154" y="111">GANs</text>
   </g>
 
-  <!-- ═══ CARD 8: PhishGuard ═══ -->
-  <g transform="translate(20, 470)">
-    <rect fill="url(#card1)" width="260" height="130" rx="8"/>
-    <rect x="0.5" y="0.5" width="259" height="129" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+  <!-- ════════════════════ ROW 4 ════════════════════ -->
+
+  <!-- PhishGuard -->
+  <g transform="translate(20, 580)">
+    <rect fill="url(#card)" width="260" height="135" rx="8"/>
+    <rect x="0.5" y="0.5" width="259" height="134" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
     <rect fill="#1e2a45" width="260" height="2" rx="8"/>
-    <circle cx="18" cy="25" r="4" fill="#5a6a8a"/>
-    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="30" y="28">PhishGuard</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="48">ML-powered phishing detection</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="62">URL + content + behavior analysis</text>
-    <rect fill="#1a1f35" x="18" y="80" width="52" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="26" y="93">Python</text>
-    <rect fill="#1a1f35" x="76" y="80" width="28" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="82" y="93">ML</text>
-    <rect fill="#1a1f35" x="110" y="80" width="72" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="116" y="93">CyberSec</text>
+    <circle cx="20" cy="28" r="4" fill="#5a6a8a"/>
+    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="32" y="33">PhishGuard</text>
+    <line x1="16" y1="44" x2="244" y2="44" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="62">ML-powered phishing detection</text>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="78">URL + content + behavior analysis</text>
+    <rect fill="#161d2f" x="16" y="96" width="56" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="24" y="111">Python</text>
+    <rect fill="#161d2f" x="78" y="96" width="36" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="86" y="111">ML</text>
+    <rect fill="#161d2f" x="120" y="96" width="80" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="128" y="111">CyberSec</text>
   </g>
 
-  <!-- ═══ CARD 9: Lipsync ═══ -->
-  <g transform="translate(295, 470)">
-    <rect fill="url(#card1)" width="260" height="130" rx="8"/>
-    <rect x="0.5" y="0.5" width="259" height="129" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+  <!-- Lipsync -->
+  <g transform="translate(295, 580)">
+    <rect fill="url(#card)" width="260" height="135" rx="8"/>
+    <rect x="0.5" y="0.5" width="259" height="134" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
     <rect fill="#1e2a45" width="260" height="2" rx="8"/>
-    <circle cx="18" cy="25" r="4" fill="#5a6a8a"/>
-    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="30" y="28">Lipsync</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="48">Audio-driven lip sync generation</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="62">Deep learning video synthesis</text>
-    <rect fill="#1a1f35" x="18" y="80" width="52" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="26" y="93">Python</text>
-    <rect fill="#1a1f35" x="76" y="80" width="90" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="82" y="93">Deep Learning</text>
+    <circle cx="20" cy="28" r="4" fill="#5a6a8a"/>
+    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="32" y="33">Lipsync</text>
+    <line x1="16" y1="44" x2="244" y2="44" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="62">Audio-driven lip sync generation</text>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="78">Deep learning video synthesis</text>
+    <rect fill="#161d2f" x="16" y="96" width="56" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="24" y="111">Python</text>
+    <rect fill="#161d2f" x="78" y="96" width="106" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="86" y="111">Deep Learning</text>
   </g>
 
-  <!-- ═══ CARD 10: Image Dehazing ═══ -->
-  <g transform="translate(570, 470)">
-    <rect fill="url(#card1)" width="260" height="130" rx="8"/>
-    <rect x="0.5" y="0.5" width="259" height="129" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
+  <!-- Image Dehazing -->
+  <g transform="translate(570, 580)">
+    <rect fill="url(#card)" width="260" height="135" rx="8"/>
+    <rect x="0.5" y="0.5" width="259" height="134" rx="8" fill="none" stroke="#1e2a45" stroke-width="0.5"/>
     <rect fill="#1e2a45" width="260" height="2" rx="8"/>
-    <circle cx="18" cy="25" r="4" fill="#5a6a8a"/>
-    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="30" y="28">Image Dehazing</text>
-    <text fill="#ffbd2e" font-family="monospace" font-size="10" x="155" y="28">★ 1</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="48">Satellite image clarity via</text>
-    <text fill="#5a6a8a" font-family="monospace" font-size="10" x="18" y="62">advanced dehazing techniques</text>
-    <rect fill="#1a1f35" x="18" y="80" width="52" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="26" y="93">Python</text>
-    <rect fill="#1a1f35" x="76" y="80" width="80" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="82" y="93">TensorFlow</text>
-    <rect fill="#1a1f35" x="162" y="80" width="28" height="18" rx="4"/><text fill="#5a6a8a" font-family="monospace" font-size="9" x="168" y="93">CV</text>
+    <circle cx="20" cy="28" r="4" fill="#5a6a8a"/>
+    <text fill="#c9d1d9" font-family="monospace" font-weight="bold" font-size="13" x="32" y="33">Image Dehazing</text>
+    <text fill="#ffbd2e" font-family="monospace" font-size="11" x="160" y="33">★ 1</text>
+    <line x1="16" y1="44" x2="244" y2="44" stroke="#1a2340" stroke-width="0.5"/>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="62">Satellite image clarity via</text>
+    <text fill="#5e6f8e" font-family="monospace" font-size="10.5" x="16" y="78">advanced dehazing techniques</text>
+    <rect fill="#161d2f" x="16" y="96" width="56" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="24" y="111">Python</text>
+    <rect fill="#161d2f" x="78" y="96" width="86" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="86" y="111">TensorFlow</text>
+    <rect fill="#161d2f" x="170" y="96" width="36" height="22" rx="5"/><text fill="#5a6a8a" font-family="monospace" font-size="10" x="178" y="111">CV</text>
   </g>
 </svg>
