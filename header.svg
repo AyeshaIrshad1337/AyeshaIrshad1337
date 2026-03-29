@@ -1,86 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="230" viewBox="0 0 850 230">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="195" viewBox="0 0 850 195">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e17"/>
+      <stop offset="100%" style="stop-color:#0d1321"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7b61ff;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#7b61ff;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#00ff9f;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
   <style>
-    @keyframes typing { from { width: 0 } to { width: 100% } }
-    @keyframes blink { 0%, 100% { opacity: 1 } 50% { opacity: 0 } }
-    @keyframes scanline { 0% { transform: translateY(-100%) } 100% { transform: translateY(100%) } }
-    @keyframes fadeIn1 { 0%, 20% { opacity: 0 } 30%, 100% { opacity: 1 } }
-    @keyframes fadeIn2 { 0%, 40% { opacity: 0 } 50%, 100% { opacity: 1 } }
-    @keyframes fadeIn3 { 0%, 55% { opacity: 0 } 65%, 100% { opacity: 1 } }
-    @keyframes fadeIn4 { 0%, 70% { opacity: 0 } 80%, 100% { opacity: 1 } }
-    @keyframes pulse { 0%, 100% { opacity: 0.6 } 50% { opacity: 1 } }
-    .terminal-bg { fill: #0a0e17; }
-    .title-bar { fill: #151b2b; }
-    .btn-red { fill: #ff5f56; }
-    .btn-yellow { fill: #ffbd2e; }
-    .btn-green { fill: #27c93f; }
-    .terminal-title { fill: #5a6a8a; font-family: 'Courier New', monospace; font-size: 12px; }
-    .prompt { fill: #7b61ff; font-family: 'Courier New', monospace; font-size: 14px; font-weight: bold; }
-    .command { fill: #00ff9f; font-family: 'Courier New', monospace; font-size: 14px; }
-    .output { fill: #8b95a8; font-family: 'Courier New', monospace; font-size: 13px; }
-    .highlight { fill: #ff6ac1; font-family: 'Courier New', monospace; font-size: 13px; }
-    .accent { fill: #7b61ff; font-family: 'Courier New', monospace; font-size: 13px; }
-    .name-text { fill: #00ff9f; font-family: 'Courier New', monospace; font-size: 22px; font-weight: bold; }
-    .role-text { fill: #5a6a8a; font-family: 'Courier New', monospace; font-size: 13px; }
-    .cursor { fill: #00ff9f; animation: blink 1s step-end infinite; }
-    .line1 { animation: fadeIn1 3s ease-out forwards; }
-    .line2 { animation: fadeIn2 3s ease-out forwards; }
-    .line3 { animation: fadeIn3 3s ease-out forwards; }
-    .line4 { animation: fadeIn4 3s ease-out forwards; }
-    .glow { filter: drop-shadow(0 0 3px rgba(0, 255, 159, 0.3)); }
-    .border-line { fill: none; stroke: #1e2940; stroke-width: 1; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    @keyframes fadeSlide1 { 0%,15%{opacity:0;transform:translateX(-8px)} 25%,100%{opacity:1;transform:translateX(0)} }
+    @keyframes fadeSlide2 { 0%,30%{opacity:0;transform:translateX(-8px)} 40%,100%{opacity:1;transform:translateX(0)} }
+    @keyframes fadeSlide3 { 0%,50%{opacity:0;transform:translateX(-8px)} 60%,100%{opacity:1;transform:translateX(0)} }
+    @keyframes fadeSlide4 { 0%,65%{opacity:0;transform:translateX(-8px)} 75%,100%{opacity:1;transform:translateX(0)} }
+    @keyframes pulse { 0%,100%{opacity:0.4} 50%{opacity:0.8} }
   </style>
+
+  <!-- BG -->
+  <rect fill="url(#headerGrad)" width="850" height="195" rx="10"/>
+  <rect x="0.5" y="0.5" width="849" height="194" rx="10" fill="none" stroke="#1a2340" stroke-width="1"/>
   
-  <!-- Terminal Window -->
-  <rect class="terminal-bg" width="850" height="230" rx="12" ry="12"/>
-  <rect class="border-line" x="0.5" y="0.5" width="849" height="229" rx="12" ry="12" style="stroke:#1e2940;stroke-width:1;fill:none"/>
-  
-  <!-- Title Bar -->
-  <rect class="title-bar" width="850" height="36" rx="12" ry="12"/>
-  <rect class="title-bar" width="850" height="12" y="24"/>
-  <circle class="btn-red" cx="20" cy="18" r="6"/>
-  <circle class="btn-yellow" cx="40" cy="18" r="6"/>
-  <circle class="btn-green" cx="60" cy="18" r="6"/>
-  <text class="terminal-title" x="425" y="22" text-anchor="middle">ayesha@codebreaker: ~/projects</text>
-  
-  <!-- Separator Line -->
-  <line x1="0" y1="36" x2="850" y2="36" style="stroke:#1e2940;stroke-width:1"/>
-  
-  <!-- Terminal Content -->
-  <g transform="translate(24, 60)">
-    <!-- Line 1: whoami -->
-    <text class="prompt" y="0">❯</text>
-    <text class="command glow" x="20" y="0">whoami</text>
-    
-    <!-- Line 2: Name output -->
-    <g class="line1">
-      <text class="name-text glow" x="0" y="28">Ayesha Irshad</text>
-      <text class="role-text" x="210" y="28">// Solo Founder · AI Engineer · Full-Stack Builder</text>
-    </g>
-    
-    <!-- Line 3: cat motto -->
-    <g class="line2">
-      <text class="prompt" y="62">❯</text>
-      <text class="command glow" x="20" y="62">cat motto.txt</text>
-    </g>
-    
-    <!-- Line 4: motto output -->
-    <g class="line3">
-      <text class="highlight" x="0" y="88">"I may not be Alan Turing, but I am confident enough to be the next codebreaker."</text>
-    </g>
-    
-    <!-- Line 5: status -->
-    <g class="line4">
-      <text class="prompt" y="122">❯</text>
-      <text class="command glow" x="20" y="122">status --current</text>
-      <text class="output" x="0" y="148">shipping:</text>
-      <text class="accent" x="75" y="148">Codet.ai</text>
-      <text class="output" x="145" y="148">·</text>
-      <text class="accent" x="160" y="148">DiffSpy</text>
-      <text class="output" x="222" y="148">·</text>
-      <text class="accent" x="237" y="148">NEXUS</text>
-      <text class="output" x="295" y="148">  @</text>
-      <text class="highlight" x="320" y="148">Ahoy</text>
-      <rect class="cursor" x="360" y="136" width="8" height="16"/>
-    </g>
+  <!-- Glow line -->
+  <rect fill="url(#glowGrad)" y="32" width="850" height="1"/>
+
+  <!-- Title bar -->
+  <rect fill="#0f1525" width="850" height="32" rx="10"/>
+  <rect fill="#0f1525" y="20" width="850" height="12"/>
+  <circle fill="#ff5f56" cx="18" cy="16" r="5.5"/>
+  <circle fill="#ffbd2e" cx="36" cy="16" r="5.5"/>
+  <circle fill="#27c93f" cx="54" cy="16" r="5.5"/>
+  <text fill="#3d4f6f" font-family="monospace" font-size="11.5" x="425" y="20" text-anchor="middle">ayesha@codebreaker — zsh — 120×40</text>
+
+  <!-- Line 1 -->
+  <g style="animation:fadeSlide1 2.5s ease-out both">
+    <text fill="#7b61ff" font-family="monospace" font-weight="bold" font-size="13" x="22" y="58">❯</text>
+    <text fill="#00ff9f" font-family="monospace" font-size="13" x="40" y="58" filter="url(#glow)">whoami --verbose</text>
+  </g>
+
+  <!-- Line 2: Name -->
+  <g style="animation:fadeSlide2 2.5s ease-out both">
+    <text fill="#00ff9f" font-family="monospace" font-weight="bold" font-size="24" x="22" y="90" filter="url(#glow)">Ayesha Irshad</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="13" x="230" y="90">│</text>
+    <text fill="#8b95a8" font-family="monospace" font-size="12.5" x="245" y="90">Solo Founder  ·  AI Engineer  ·  Full-Stack Builder</text>
+  </g>
+
+  <!-- Line 3 -->
+  <g style="animation:fadeSlide3 2.5s ease-out both">
+    <text fill="#7b61ff" font-family="monospace" font-weight="bold" font-size="13" x="22" y="120">❯</text>
+    <text fill="#00ff9f" font-family="monospace" font-size="13" x="40" y="120" filter="url(#glow)">cat motto.txt</text>
+  </g>
+
+  <!-- Line 4: Motto -->
+  <g style="animation:fadeSlide4 2.5s ease-out both">
+    <text fill="#ff6ac1" font-family="monospace" font-size="13" x="22" y="148" font-style="italic">"I may not be Alan Turing, but I am confident enough to be the next codebreaker."</text>
+  </g>
+
+  <!-- Line 5: prompt -->
+  <g style="animation:fadeSlide4 2.5s ease-out both">
+    <text fill="#7b61ff" font-family="monospace" font-weight="bold" font-size="13" x="22" y="178">❯</text>
+    <text fill="#00ff9f" font-family="monospace" font-size="13" x="40" y="178" filter="url(#glow)">shipping</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="13" x="110" y="178">→</text>
+    <text fill="#c9d1d9" font-family="monospace" font-size="13" x="130" y="178">Codet.ai</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="13" x="210" y="178">·</text>
+    <text fill="#c9d1d9" font-family="monospace" font-size="13" x="225" y="178">DiffSpy</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="13" x="290" y="178">·</text>
+    <text fill="#c9d1d9" font-family="monospace" font-size="13" x="305" y="178">NEXUS</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="13" x="365" y="178">·</text>
+    <text fill="#c9d1d9" font-family="monospace" font-size="13" x="380" y="178">ETA</text>
+    <text fill="#3d4f6f" font-family="monospace" font-size="13" x="435" y="178">@</text>
+    <text fill="#ff6ac1" font-family="monospace" font-size="13" x="450" y="178">Ahoy</text>
+    <rect fill="#00ff9f" x="498" y="166" width="8" height="15" style="animation:blink 1s step-end infinite"/>
   </g>
 </svg>
