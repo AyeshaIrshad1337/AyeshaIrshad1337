@@ -1,8 +1,8 @@
 """Build the profile card, in a dark and a light version.
 
 One card holds the whole profile: who I am, what I am building, live GitHub
-numbers and the motto on the left, and a small Enigma machine on the right
-whose lamps spell out a word. It is plain SVG with SMIL animation, so it plays
+numbers and the motto on the left, and an animated rubber duck on the right
+(see duck.py). It is plain SVG with SMIL animation, so it plays
 inside GitHub's image proxy.
 
 The GitHub numbers come from the API, so it needs a token in GITHUB_TOKEN
@@ -17,6 +17,8 @@ import json
 import os
 import random
 import urllib.request
+
+from duck import duck_svg
 
 USER = "AyeshaIrshad1337"
 OUT = Path(__file__).resolve().parent.parent / "assets"
@@ -37,14 +39,12 @@ BUILDING = [
     ("NEXUS", "Crypto opportunity scanner"),
 ]
 MOTTO = ("I may not be Alan Turing, but I am confident", "enough to be the next codebreaker.")
-LAMP_WORD = "CODEBREAKER"
-KEYBOARD = ["QWERTZUIO", "ASDFGHJK", "PYXCVBNML"]  # the real Enigma lamp layout
 
 THEMES = {
     "dark": dict(bg="#161b22", panel="#0d1117", border="#30363d", text="#e6edf3", muted="#8b949e",
-                 faint="#6e7681", key="#3fb950", head="#a371f7", lamp="#d29922", on_lamp="#0d1117"),
+                 faint="#6e7681", key="#3fb950", head="#e3b341"),
     "light": dict(bg="#f6f8fa", panel="#ffffff", border="#d0d7de", text="#1f2328", muted="#59636e",
-                  faint="#818b98", key="#1a7f37", head="#8250df", lamp="#bf8700", on_lamp="#ffffff"),
+                  faint="#818b98", key="#1a7f37", head="#9a6700"),
 }
 
 QUERY = """
@@ -176,56 +176,8 @@ def name_block(x, y, t):
     return "".join(out)
 
 
-def enigma(x0, y0, t):
-    """Rotor windows over a lamp board. Lamps light one by one to spell LAMP_WORD."""
-    slots = len(LAMP_WORD) + 4  # four dark slots before the word repeats
-    dur = slots * 0.55
-    key_times = ";".join(f"{i / slots:.4f}" for i in range(slots)) + ";1"
-    gap, r = 32, 12.5
-    board_w = (len(KEYBOARD[0]) - 1) * gap
-    out = []
-
-    # rotors: the right one steps on every key press, like the real machine
-    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    win_w, win_h, win_gap = 44, 30, 16
-    rx0 = x0 + (board_w - (3 * win_w + 2 * win_gap)) / 2
-    out.append(f'<clipPath id="rotor"><rect width="{win_w}" height="{win_h}" rx="6"/></clipPath>')
-    for i, start in enumerate((0, 4, 19)):  # A, E, T
-        out.append(f'<g transform="translate({rx0 + i * (win_w + win_gap):.1f},{y0})">')
-        out.append(f'<rect width="{win_w}" height="{win_h}" rx="6" fill="{t["panel"]}" stroke="{t["border"]}"/>')
-        out.append('<g clip-path="url(#rotor)">')
-        if i == 2:
-            strip = "".join(text(win_w / 2, 20 + j * win_h, alphabet[(start + j) % 26], t["text"], size=15, weight="700", anchor="middle")
-                            for j in range(len(LAMP_WORD) + 1))
-            values = [f"0 {-min(s, len(LAMP_WORD)) * win_h}" for s in range(slots)] + ["0 0"]
-            out.append(f'<g><animateTransform attributeName="transform" type="translate" values="{";".join(values)}" '
-                       f'keyTimes="{key_times}" dur="{dur:.2f}s" calcMode="discrete" repeatCount="indefinite"/>{strip}</g>')
-        else:
-            out.append(text(win_w / 2, 20, alphabet[start], t["text"], size=15, weight="700", anchor="middle"))
-        out.append("</g></g>")
-
-    # lamp board
-    ly = y0 + 74
-    for row_i, row in enumerate(KEYBOARD):
-        row_x = x0 + (len(KEYBOARD[0]) - len(row)) * gap / 2
-        for col_i, ch in enumerate(row):
-            cx, cy = row_x + col_i * gap, ly + row_i * 36
-            out.append(f'<circle cx="{cx:.1f}" cy="{cy}" r="{r}" fill="{t["panel"]}" stroke="{t["border"]}"/>')
-            out.append(text(f"{cx:.1f}", cy + 4.5, ch, t["faint"], size=11.5, anchor="middle"))
-            lit = [1 if i < len(LAMP_WORD) and LAMP_WORD[i] == ch else 0 for i in range(slots)]
-            if any(lit):
-                values = ";".join(str(v) for v in lit + [lit[0]])
-                out.append(f'<g opacity="0"><animate attributeName="opacity" values="{values}" keyTimes="{key_times}" '
-                           f'dur="{dur:.2f}s" calcMode="discrete" repeatCount="indefinite"/>'
-                           f'<circle cx="{cx:.1f}" cy="{cy}" r="{r}" fill="{t["lamp"]}"/>'
-                           + text(f"{cx:.1f}", cy + 4.5, ch, t["on_lamp"], size=11.5, weight="700", anchor="middle")
-                           + "</g>")
-    caption_y = ly + 2 * 36 + 40
-    out.append(text(x0 + board_w / 2, caption_y, "the lamps spell what I like doing", t["faint"], size=10.5, anchor="middle"))
-    return "".join(out)
-
-
-def build(stats, t):
+def build(stats, theme):
+    t = THEMES[theme]
     x = 32
     p = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
@@ -261,7 +213,7 @@ def build(stats, t):
     p.append(f'<rect x="{cursor_x:.1f}" y="{y + 7}" width="7" height="14" fill="{t["key"]}">'
              '<animate attributeName="opacity" values="1;0;1" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></rect>')
 
-    p.append(enigma(560, 175, t))
+    p.append(duck_svg(540, 150, theme, t["muted"], t["faint"]))
     p.append("</svg>")
     return "\n".join(p) + "\n"
 
@@ -271,7 +223,7 @@ def main():
     OUT.mkdir(exist_ok=True)
     for theme, tokens in THEMES.items():
         path = OUT / f"card-{theme}.svg"
-        path.write_text(build(stats, tokens), encoding="utf-8")
+        path.write_text(build(stats, theme), encoding="utf-8")
         print("wrote", path.relative_to(OUT.parent))
     print(json.dumps(stats))
 
