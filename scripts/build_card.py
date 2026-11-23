@@ -1,8 +1,9 @@
 """Build the profile card, in a dark and a light version.
 
 One card holds the whole profile: who I am, what I am building, live GitHub
-numbers and the motto on the left, and an animated runner on the right
-(see runner.py). It is plain SVG with SMIL animation, so it plays
+numbers and the motto on the left; an animated runner and my experience on
+the right (see runner.py). It also writes the small link badges that sit
+under the card. It is plain SVG with SMIL animation, so it plays
 inside GitHub's image proxy.
 
 The GitHub numbers come from the API, so it needs a token in GITHUB_TOKEN
@@ -22,21 +23,35 @@ from runner import runner_svg
 
 USER = "AyeshaIrshad1337"
 OUT = Path(__file__).resolve().parent.parent / "assets"
-W, H = 860, 520
+W, H = 860, 540
 FONT = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
 
 NAME = "Ayesha Irshad"
+# Facts below come from ayeshairshad.me; keep the two in step.
 ABOUT = [
-    ("Role", "AI Engineer @ Ahoy"),
-    ("Also", "Solo founder, building on the side"),
-    ("Base", "Karachi, Pakistan"),
-    ("Focus", "Multi-agent systems, LLM tooling"),
+    ("Role", "Research Team Lead, AI agents"),
+    ("Base", "Karachi, Pakistan (UTC+5)"),
+    ("Focus", "Agents, knowledge graphs, LLM evals"),
     ("Stack", "Python, TypeScript, LangGraph, Postgres"),
+    ("Open to", "Remote AI engineering roles"),
 ]
 BUILDING = [
-    ("Codet.ai", "GTM optimization platform"),
-    ("DiffSpy", "Pricing intelligence SaaS"),
-    ("NEXUS", "Crypto opportunity scanner"),
+    ("Spire", "Architecture intelligence platform"),
+    ("Kairos", "Crypto engine with bounded risk"),
+    ("NEXUS", "Binance trading, 7-stage engine"),
+]
+EXPERIENCE = [
+    ("2025-now", "Research Team Lead", "Agents for a B2B automation platform"),
+    ("2025", "AI Researcher · AHOY, Trouve Labs", "Football tracking, voice calling bot"),
+    ("2023-25", "AI Researcher · FAST NUCES", "Paper at IEEE INMIC 2024"),
+    ("2024", "Co-founder · Climate.io", "2nd place, TeknoFest 2024"),
+    ("2021-25", "BS Artificial Intelligence", "FAST NUCES Karachi"),
+]
+LINKS = [
+    ("portfolio", "~/", "portfolio", "https://ayeshairshad.me"),
+    ("resume", "[=]", "resume", "https://drive.google.com/file/d/1BBfrr9IwLIgq-DGEpn9WsEtf6PwRnRUQ/view?usp=sharing"),
+    ("linkedin", "[in]", "linkedin", "https://www.linkedin.com/in/ayesha-irshad/"),
+    ("email", "[@]", "email", "mailto:ayeshaitshad124@gmail.com"),
 ]
 MOTTO = ("I may not be Alan Turing, but I am confident", "enough to be the next codebreaker.")
 
@@ -176,12 +191,37 @@ def name_block(x, y, t):
     return "".join(out)
 
 
+def timeline(x, y, items, t, step=40):
+    """Experience: the years in the key colour, the role, and a muted line under it."""
+    out = []
+    for years, title, sub in items:
+        out.append(text(x, y, years, t["key"], size=11.5))
+        out.append(text(x + 72, y, title, t["text"], size=12))
+        out.append(text(x + 72, y + 16, sub, t["muted"], size=11))
+        y += step
+    return "".join(out), y
+
+
+def link_badge(icon, label, t):
+    """A small clickable-looking tag for the link row under the card."""
+    size = 12
+    w = round((len(icon) + 1 + len(label)) * size * 0.6 + 24)
+    return "\n".join([
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="28" viewBox="0 0 {w} 28" '
+        f'font-family="{FONT}" role="img" aria-label="{esc(label)}">',
+        f'<rect x="0.5" y="0.5" width="{w - 1}" height="27" rx="6" fill="{t["bg"]}" stroke="{t["border"]}"/>',
+        text(12, 18.5, icon, t["head"], size=size, weight="700"),
+        text(12 + (len(icon) + 1) * size * 0.6, 18.5, label, t["text"], size=size),
+        "</svg>",
+    ]) + "\n"
+
+
 def build(stats, theme):
     t = THEMES[theme]
     x = 32
     p = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-        f'font-family="{FONT}" role="img" aria-label="Ayesha Irshad, AI engineer at Ahoy and solo founder">',
+        f'font-family="{FONT}" role="img" aria-label="Ayesha Irshad, AI engineer and research team lead in Karachi">',
         f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10" fill="{t["bg"]}" stroke="{t["border"]}"/>',
         text(x, 46, "ayesha@codebreaker", t["muted"], size=12),
         name_block(x, 78, t),
@@ -213,7 +253,11 @@ def build(stats, theme):
     p.append(f'<rect x="{cursor_x:.1f}" y="{y + 7}" width="7" height="14" fill="{t["key"]}">'
              '<animate attributeName="opacity" values="1;0;1" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></rect>')
 
-    p.append(runner_svg(530, 140, 300, theme, t["muted"]))
+    rx = 490
+    p.append(runner_svg(rx, 46, 340, theme, t["muted"]))
+    p.append(heading(rx, 276, "Experience", t, width=340))
+    block, _ = timeline(rx, 302, EXPERIENCE, t)
+    p.append(block)
     p.append("</svg>")
     return "\n".join(p) + "\n"
 
@@ -225,6 +269,8 @@ def main():
         path = OUT / f"card-{theme}.svg"
         path.write_text(build(stats, theme), encoding="utf-8")
         print("wrote", path.relative_to(OUT.parent))
+        for name, icon, label, _ in LINKS:
+            (OUT / f"link-{name}-{theme}.svg").write_text(link_badge(icon, label, tokens), encoding="utf-8")
     print(json.dumps(stats))
 
 

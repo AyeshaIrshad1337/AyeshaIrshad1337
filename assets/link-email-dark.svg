@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="89" height="28" viewBox="0 0 89 28" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" role="img" aria-label="email">
+<rect x="0.5" y="0.5" width="88" height="27" rx="6" fill="#161b22" stroke="#30363d"/>
+<text x="12" y="18.5" fill="#e3b341" font-size="12" font-weight="700">[@]</text>
+<text x="40.8" y="18.5" fill="#e6edf3" font-size="12">email</text>
+</svg>
