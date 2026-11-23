@@ -45,5 +45,15 @@
 <br/>
 
 <div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AyeshaIrshad1337/AyeshaIrshad1337/output/github-snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AyeshaIrshad1337/AyeshaIrshad1337/output/github-snake.svg"/>
+    <img src="https://raw.githubusercontent.com/AyeshaIrshad1337/AyeshaIrshad1337/output/github-snake-dark.svg" width="100%" alt="Snake eating the contribution graph"/>
+  </picture>
+</div>
+
+<br/>
+
+<div align="center">
   <img src="./footer.svg" width="100%" alt="Built with obsession, shipped from Karachi"/>
 </div>
