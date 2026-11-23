@@ -232,7 +232,7 @@ def build(stats, theme):
     p.append(block)
 
     y += 14
-    p.append(heading(x, y, "Building", t))
+    p.append(heading(x, y, "Building (private repos)", t))
     block, y = rows(x, y + 26, BUILDING, t)
     p.append(block)
 
