@@ -1,7 +1,10 @@
-name: Profile stats
+name: Profile card
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/build_card.py]
   schedule:
     - cron: "30 1 * * *"
 
@@ -9,7 +12,7 @@ permissions:
   contents: write
 
 jobs:
-  stats:
+  card:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,20 +21,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build stats card
+      - name: Build card
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_stats.py
+        run: python3 scripts/build_card.py
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats-dark.svg assets/stats-light.svg
+          git add assets/card-dark.svg assets/card-light.svg
           if git diff --cached --quiet; then
-            echo "Stats unchanged"
+            echo "Card unchanged"
             exit 0
           fi
-          git commit -m "Refresh profile stats"
+          git commit -m "Refresh profile card numbers"
           git pull --rebase
           git push
