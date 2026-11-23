@@ -1,8 +1,8 @@
 """Build the profile card, in a dark and a light version.
 
 One card holds the whole profile: who I am, what I am building, live GitHub
-numbers and the motto on the left, and an animated rubber duck on the right
-(see duck.py). It is plain SVG with SMIL animation, so it plays
+numbers and the motto on the left, and an animated runner on the right
+(see runner.py). It is plain SVG with SMIL animation, so it plays
 inside GitHub's image proxy.
 
 The GitHub numbers come from the API, so it needs a token in GITHUB_TOKEN
@@ -18,7 +18,7 @@ import os
 import random
 import urllib.request
 
-from duck import duck_svg
+from runner import runner_svg
 
 USER = "AyeshaIrshad1337"
 OUT = Path(__file__).resolve().parent.parent / "assets"
@@ -213,7 +213,7 @@ def build(stats, theme):
     p.append(f'<rect x="{cursor_x:.1f}" y="{y + 7}" width="7" height="14" fill="{t["key"]}">'
              '<animate attributeName="opacity" values="1;0;1" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></rect>')
 
-    p.append(duck_svg(540, 150, theme, t["muted"], t["faint"]))
+    p.append(runner_svg(530, 140, 300, theme, t["muted"]))
     p.append("</svg>")
     return "\n".join(p) + "\n"
 
